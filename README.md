@@ -124,3 +124,87 @@ I am the Founder and Technical Driver of **Advanced Nano Materials LLC**. Operat
   </div>
   <p style="text-align: right;"><em>STATUS: MONITORING INBOUND TELEMETRY...</em></p>
 </div>
+# CEFA-Pro N2N_GlobalBridge — NodeValidator v2.0
+
+**Carbon EM Field Analyzer Pro**  
+Researcher: Sean Joseph Brennan · ORCID: [0009-0008-1091-5147](https://orcid.org/0009-0008-1091-5147)  
+Organization: Advanced Nano Materials LLC  
+GitLab: [gitlab.com/z716526/cefa-pro](https://gitlab.com/z716526/cefa-pro)
+
+---
+
+## Overview
+
+`NodeValidator` is Stage 1 of the 4-stage **N2N_GlobalBridge** pipeline.  
+It performs pre-flight validation before the 14.2 GHz harvest dispatch.
+
+```
+S1 → NodeValidator (this)       Pre-flight: compiler / resonance / ethics / QVM seal
+S2 → ResonanceTrigger           14.2 GHz → Hydrogen Harvest activation
+S3 → RwaAllocator               RWA Index + 59/41 Mercy Pool routing
+S4 → ZenodoPublisher            DOI live metadata publish
+```
+
+---
+
+## Protocol Constants
+
+| Constant | Value | Purpose |
+|---|---|---|
+| `REQUIRED_COMPILER` | `v0.8.26` | Solidity compiler integrity |
+| `RESONANCE_HZ` | `14.2` | Carbon Nano-mesh Array frequency |
+| `NATURE_RATIO` | `59/41` | Immutable Nature Contract |
+| `MERCY_POOL_PCT` | `59` | Humanitarian allocation |
+| `GENESIS_BUILD_PCT` | `41` | Reinvestment allocation |
+| `ORCID` | `0009-0008-1091-5147` | QVM Seal salt |
+| `RWA_ID` | `CN-MESH-14.2` | ARC-69 / XRPL token |
+
+---
+
+## 4 Validation Gates
+
+| Gate | Check | Exception |
+|---|---|---|
+| 1 | Solidity compiler = v0.8.26 | `SecurityException` |
+| 2 | `14.2` constant in source bytecode | `IllegalStateException` |
+| 3 | `59` + `41` in contract source | `SecurityException` |
+| 4 | QVM SHA-256 seal computed | `Exception` |
+
+---
+
+## Build & Run
+
+```bash
+# Build runnable jar (requires Maven + JDK 17)
+mvn clean package
+
+# Run with mainnet chain ID
+java -jar target/cefa-pro-n2n-2.0.0-runnable.jar 1
+
+# Run tests
+mvn test
+```
+
+**On Android (Termux):**
+```bash
+pkg install openjdk-17 maven
+cd cefa-pro
+mvn clean package
+java -jar target/cefa-pro-n2n-2.0.0-runnable.jar 1
+```
+
+---
+
+## Mercy Pool Allocation (59%)
+- 30% → Children's Hospitals
+- 20% → Open-Science Education
+- 9%  → Planetary Health
+
+## Genesis Build Allocation (41%)
+- 25% → Stage 1 Volcanic Carbon Feedstock
+- 10% → GPU Compute (Celeritas / PhysicsNeMo)
+- 6%  → AI Instruments (Claude / Gemini / GPT-4o)
+
+---
+
+*Nature-to-Nature Protocol v2.0 · QVM Carbonized · ARC-69 · XRPL*

@@ -1,4 +1,10 @@
-# Advanced Nano Materials LLC
+# Advanced Nano Materials 
+### 🔐 System Identity
+- **System Architect:** Sean Joseph Brennan
+- **ORCID iD:** [0009-0008-1091-5147](https://orcid.org/0009-0008-1091-5147)
+- **Sovereign Custodial Address:** `bc1qlhmqkvcal2nrh35geykex44d2neud83qgjlsgh`
+- **Build Version:** 1.1.0 (Wallet-Integrated Carbon)
+
 ### System Architect & Technical Driver: Sean Joseph Brennan
 ### ORCID iD: [0009-0008-1091-5147](https://orcid.org/0009-0008-1091-5147)
 QVM Blackbox Carbon: Physical Code & Satoshi Banking Schematic
@@ -69,6 +75,11 @@ AI Integration: The agent monitors the "Paste" buffer to process and add any ext
 
 ## 🛠️ System Overview
 I am the Founder and Technical Driver of **Advanced Nano Materials LLC**. Operating as a system architect, I design the overarching technical frameworks and direct automated agents to execute advanced carbon simulation pipelines, distributed networks, and cryptographic value-migration mechanisms.
+### 🧬 Architecture Logic Flow
+The system operates as a three-stage pipeline:
+1. **Harvesting:** `qvm_harvester.py` captures raw Terahertz (THz) flux data.
+2. **Validation:** `NodeValidator` (Java 26) checks the resonance against the 14.2 GHz frequency gate.
+3. **Settlement:** The 59/41 Nature Contract is applied, and the resulting Satoshi balance is committed to the local `qvm_wallet_ledger.json`.
 
 ---
 
@@ -447,4 +458,11 @@ mvn clean package
 
 # Run validation gate with mainnet chain ID
 java -jar target/cefa-pro-n2n-2.0.0-runnable.jar 1
+
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.advancednanomaterials</groupId>
+    <artifactId>qvm-carbonized-core</artifactId>
+    <version>1.1.0</version>  <!-- THIS IS THE LINE -->
+</project>
 

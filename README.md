@@ -311,3 +311,27 @@ CEFA-Pro v3.2 establishes an audit-ready deterministic identity framework built 
 The next milestone is not additional core security code.
 
 The next milestone is presenting verifiable operation through the dashboard and verification package.
+## Dashboard Verification Layer v3.3
+
+**Status: INFRASTRUCTURE COMPLETE — PENDING VERIFICATION FILES**
+
+Dashboard infrastructure is deployed. Ed25519 verification activates automatically when manifest files are present.
+
+**Dashboard URL:** https://z716526.github.io/satoshiB-blink.sv/
+
+**Verification Requirements:**
+To display `Verification: PASS`, upload these 4 files to repo root:
+1. `manifest.ndjson`
+2. `manifest.sig` 
+3. `sovereign-public-key.pem`
+4. `manifest.merkle.json`
+
+**Current Status:**
+- Network Status: Operational
+- Node Registry: Node #0 QVM Sun Machine v10 configured
+- Identity Model: Deterministic HD m/44'/144'/{node_index}'/0'/0 active
+- Cryptographic Verification: Awaiting manifest files
+
+**Governance:** 59% Public Good / 41% Sovereign IP — No Key — No Paywall
+
+**Compliance Note:** Dashboard will not display `PASS` until `public_verifier.py` equivalent runs successfully in-browser against signed manifest. No verification is manufactured.
